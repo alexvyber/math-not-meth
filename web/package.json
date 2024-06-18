@@ -6,12 +6,12 @@
     "clean": "rimraf .next",
     "predev": "npm run clean",
     "prebuild": "npm run clean",
-    "dev": "next dev",
+    "dev": "next dev --port 4000",
     "build": "next build",
     "start": "next start",
     "next:lint": "next lint",
     "format": "biome format --write .",
-    "lint": "biome lint --write --unsafe src"
+    "lint": "biome lint --write --unsafe ./app ./components"
   },
   "dependencies": {
     "@stylexjs/open-props": "^0.6.1",

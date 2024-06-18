@@ -182,13 +182,13 @@
         "noReExportAll": "error"
       }
     },
-    "ignore": ["dist", "build", "node_modules"]
+    "ignore": ["dist", "build", "node_modules", ".next", "public"]
   },
   "formatter": {
     "lineWidth": 120,
     "indentStyle": "space",
     "indentWidth": 2,
-    "ignore": ["dist", "build", "node_modules"],
+    "ignore": ["dist", "build", "node_modules", ".next", "public"],
     "attributePosition": "multiline"
   },
   "javascript": {

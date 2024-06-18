@@ -1,18 +1,7 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- *
- */
-
-import React from "react"
 import stylex from "@stylexjs/stylex"
-import Card from "@/components/Card"
+import Card from "@/components/card"
 import { globalTokens as $, spacing, text, scales } from "./globalTokens.stylex"
 import Counter from "./Counter"
-import Button from "@/components/Button"
 
 const HOMEPAGE = "https://stylexjs.com"
 

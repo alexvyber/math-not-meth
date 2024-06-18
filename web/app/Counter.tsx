@@ -13,7 +13,7 @@ import * as stylex from "@stylexjs/stylex"
 import { spacing, text, globalTokens as $ } from "./globalTokens.stylex"
 import { colors } from "@stylexjs/open-props/lib/colors.stylex"
 import { useState } from "react"
-import Button from "@/components/Button"
+import Button from "@/components/button"
 
 export default function Counter() {
   const [count, setCount] = useState(30)

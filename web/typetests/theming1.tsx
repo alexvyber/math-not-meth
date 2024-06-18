@@ -78,13 +78,13 @@ correctTheme satisfies Theme<typeof buttonTokens, symbol>
 
 correctTheme satisfies CompiledStyles
 
-const result: string = stylex(correctTheme)
-const result2: Readonly<{
+const _result: string = stylex(correctTheme)
+const _result2: Readonly<{
   className?: string
   style?: Readonly<{ [key: string]: string | number }>
 }> = stylex.props(correctTheme)
 
-const wrongTheme1 = stylex.createTheme(buttonTokens, {
+const _wrongTheme1 = stylex.createTheme(buttonTokens, {
   bgColor: "red",
   textColor: "white",
   // @ts-expect-error - cornerRadius is a string.
@@ -116,29 +116,29 @@ const themeB = stylex.createTheme(varsB, {
 
 const MyComponent: React.FC<{ theme: Theme<typeof varsA> }> = ({ theme }) => <div {...stylex.props(theme)} />
 
-const a1: Theme<typeof varsA> = themeA
-const b1: Theme<typeof varsB> = themeB
+const _a1: Theme<typeof varsA> = themeA
+const _b1: Theme<typeof varsB> = themeB
 
 // @ts-expect-error - themeB is not compatible with themeA
-const bIsNotA: Theme<typeof varsA> = themeB
+const _bIsNotA: Theme<typeof varsA> = themeB
 
 // @ts-expect-error - themeA is not compatible with themeB
-const aIsNotB: Theme<typeof varsB> = themeA
+const _aIsNotB: Theme<typeof varsB> = themeA
 
 // Instantiate component with themeA
-const Correct: React.FC = () => <MyComponent theme={themeA} />
+const _Correct: React.FC = () => <MyComponent theme={themeA} />
 
 // @ts-expect-error - themeB is not compatible with themeA
-const Incorrect: React.FC = () => <MyComponent theme={themeB} />
+const _Incorrect: React.FC = () => <MyComponent theme={themeB} />
 
 // Usage of themes with stylex.props
-const p1 = stylex.props(themeA)
-const p2 = stylex.props(themeB)
+const _p1 = stylex.props(themeA)
+const _p2 = stylex.props(themeB)
 
 // @ts-expect-error - You can apply themes, not varGroups
-const v1 = stylex.props(varsA)
+const _v1 = stylex.props(varsA)
 // @ts-expect-error - You can apply themes, not varGroups
-const v2 = stylex.props(varsB)
+const _v2 = stylex.props(varsB)
 
 // It should be possible to define vars based on other vars
 const varsC = stylex.defineVars({
@@ -146,7 +146,7 @@ const varsC = stylex.defineVars({
 })
 
 // But the override should still be a string.
-const themeC = stylex.createTheme(varsC, {
+const _themeC = stylex.createTheme(varsC, {
   varC1: "green",
 })
 
@@ -163,14 +163,14 @@ const typedTokens = stylex.defineVars({
   shortAnimation: stylex.types.time<string>("0.5s"),
 })
 
-const correctlyTypedTheme = stylex.createTheme(typedTokens, {
+const _correctlyTypedTheme = stylex.createTheme(typedTokens, {
   bgColor: stylex.types.color("red"),
   cornerRadius: stylex.types.length("4px"),
   translucent: stylex.types.number(0.5),
   shortAnimation: stylex.types.time("0.5s"),
 })
 
-const correctlyTypedThemeNested = stylex.createTheme(typedTokens, {
+const _correctlyTypedThemeNested = stylex.createTheme(typedTokens, {
   bgColor: stylex.types.color({
     default: "red",
     [DARK]: "hotpink",
@@ -190,7 +190,7 @@ const correctlyTypedThemeNested = stylex.createTheme(typedTokens, {
   }),
 })
 
-const wronglyTypedTheme1 = stylex.createTheme(typedTokens, {
+const _wronglyTypedTheme1 = stylex.createTheme(typedTokens, {
   bgColor: {
     // @ts-expect-error - You can apply themes, not varGroups
     default: "red",
@@ -212,7 +212,7 @@ const wronglyTypedTheme1 = stylex.createTheme(typedTokens, {
   }),
 })
 
-const wronglyTypedTheme2 = stylex.createTheme(typedTokens, {
+const _wronglyTypedTheme2 = stylex.createTheme(typedTokens, {
   bgColor: {
     // @ts-expect-error - You can apply themes, not varGroups
     default: "red",

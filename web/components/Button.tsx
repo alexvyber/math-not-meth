@@ -1,4 +1,4 @@
-import stylex, { StyleXStyles } from "@stylexjs/stylex"
+import stylex from "@stylexjs/stylex"
 
 type Props = React.ComponentPropsWithoutRef<"button"> & {
   variant?: "gray" | "violet"
@@ -6,11 +6,9 @@ type Props = React.ComponentPropsWithoutRef<"button"> & {
 }
 
 export default function Button({ children, variant = "gray", buttonWidth = 30, ...props }: Props) {
-  const width = styles.width(`${buttonWidth}px`)
-  const base = styles.base
-  const variant_ = styles[variant]
-
-  console.log({ width, base, variant_ })
+  const _width = styles.width(`${buttonWidth}px`)
+  const _base = styles.base
+  const _variant_ = styles[variant]
 
   return (
     <button

@@ -36,27 +36,27 @@ const MAX_BASE_SIZE = 20
 
 // Font sizes in `rem` units
 const MIN_FONT = {
-  xxs: Math.round(MIN_BASE_SIZE / Math.pow(MIN_SCALE, 3) / 0.16) / 100,
-  xs: Math.round(MIN_BASE_SIZE / Math.pow(MIN_SCALE, 2) / 0.16) / 100,
+  xxs: Math.round(MIN_BASE_SIZE / MIN_SCALE ** 3 / 0.16) / 100,
+  xs: Math.round(MIN_BASE_SIZE / MIN_SCALE ** 2 / 0.16) / 100,
   sm: Math.round(MIN_BASE_SIZE / MIN_SCALE / 0.16) / 100,
   p: Math.round(MIN_BASE_SIZE / 4) / 4,
   h5: Math.round((MIN_BASE_SIZE * MIN_SCALE) / 0.16) / 100,
-  h4: Math.round((MIN_BASE_SIZE * Math.pow(MIN_SCALE, 2)) / 0.16) / 100,
-  h3: Math.round((MIN_BASE_SIZE * Math.pow(MIN_SCALE, 3)) / 0.16) / 100,
-  h2: Math.round((MIN_BASE_SIZE * Math.pow(MIN_SCALE, 4)) / 0.16) / 100,
-  h1: Math.round((MIN_BASE_SIZE * Math.pow(MIN_SCALE, 5)) / 0.16) / 100,
+  h4: Math.round((MIN_BASE_SIZE * MIN_SCALE ** 2) / 0.16) / 100,
+  h3: Math.round((MIN_BASE_SIZE * MIN_SCALE ** 3) / 0.16) / 100,
+  h2: Math.round((MIN_BASE_SIZE * MIN_SCALE ** 4) / 0.16) / 100,
+  h1: Math.round((MIN_BASE_SIZE * MIN_SCALE ** 5) / 0.16) / 100,
 }
 // Font sizes in `rem` units
 const MAX_FONT = {
-  xxs: Math.round(MAX_BASE_SIZE / Math.pow(MAX_SCALE, 3) / 0.16) / 100,
-  xs: Math.round(MAX_BASE_SIZE / Math.pow(MAX_SCALE, 2) / 0.16) / 100,
+  xxs: Math.round(MAX_BASE_SIZE / MAX_SCALE ** 3 / 0.16) / 100,
+  xs: Math.round(MAX_BASE_SIZE / MAX_SCALE ** 2 / 0.16) / 100,
   sm: Math.round(MAX_BASE_SIZE / MAX_SCALE / 0.16) / 100,
   p: Math.round(MAX_BASE_SIZE / 4) / 4,
   h5: Math.round((MAX_BASE_SIZE * MAX_SCALE) / 0.16) / 100,
-  h4: Math.round((MAX_BASE_SIZE * Math.pow(MAX_SCALE, 2)) / 0.16) / 100,
-  h3: Math.round((MAX_BASE_SIZE * Math.pow(MAX_SCALE, 3)) / 0.16) / 100,
-  h2: Math.round((MAX_BASE_SIZE * Math.pow(MAX_SCALE, 4)) / 0.16) / 100,
-  h1: Math.round((MAX_BASE_SIZE * Math.pow(MAX_SCALE, 5)) / 0.16) / 100,
+  h4: Math.round((MAX_BASE_SIZE * MAX_SCALE ** 2) / 0.16) / 100,
+  h3: Math.round((MAX_BASE_SIZE * MAX_SCALE ** 3) / 0.16) / 100,
+  h2: Math.round((MAX_BASE_SIZE * MAX_SCALE ** 4) / 0.16) / 100,
+  h1: Math.round((MAX_BASE_SIZE * MAX_SCALE ** 5) / 0.16) / 100,
 }
 const SLOPE = {
   xxs: (16 * (MAX_FONT.xxs - MIN_FONT.xxs)) / (MAX_WIDTH - MIN_WIDTH),
