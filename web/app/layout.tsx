@@ -26,16 +26,18 @@ export default function RootLayout({
       // {...stylex.props(styles.html, styles.reset)}
       lang="en"
     >
-      <body 
+      <body
       // {...stylex.props(styles.reset, styles.body)}
-      >{children}</body>
+      >
+        {children}
+      </body>
     </html>
   )
 }
 
 const DARK = "@media (prefers-color-scheme: dark)"
 
-const styles = stylex.create({
+const _styles = stylex.create({
   html: {
     colorScheme: "light dark",
   },

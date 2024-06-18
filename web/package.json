@@ -18,9 +18,9 @@
     "@stylexjs/stylex": "^0.6.1",
     "bright": "^0.8.4",
     "konva": "^9.3.11",
-    "next": "15.0.0-rc.0",
-    "react": "19.0.0-rc-1434af3d22-20240618",
-    "react-dom": "19.0.0-rc-1434af3d22-20240618",
+    "next": "14.2",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-konva": "^18.2.10"
   },
   "devDependencies": {
