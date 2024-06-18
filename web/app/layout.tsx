@@ -23,10 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html
-      {...stylex.props(styles.html, styles.reset)}
+      // {...stylex.props(styles.html, styles.reset)}
       lang="en"
     >
-      <body {...stylex.props(styles.reset, styles.body)}>{children}</body>
+      <body 
+      // {...stylex.props(styles.reset, styles.body)}
+      >{children}</body>
     </html>
   )
 }
